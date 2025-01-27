@@ -4,7 +4,7 @@ module sui_token_contract::basictoken {
     use sui::balance::{Self, Supply, Balance};
 
     const DECIMALS: u8 = 9;
-    const MAX_SUPPLY: u64 = 1_000_000_000; // Set your fixed maximum supply here
+    const MAX_SUPPLY: u64 = 1_000_000_000_000_000_000; // Set your fixed maximum supply here
 
     const E_MAXIMUM_SUPPLY_REACHED: u64 = 100;
 
@@ -19,9 +19,9 @@ module sui_token_contract::basictoken {
         let (treasury_cap, metadata) = coin::create_currency<BASICTOKEN>(
             witness,
             DECIMALS, // decimals
-            b"BTKN7", // symbol
-            b"BASICTOKEN7", // name
-            b"Description of the BASICTOKEN7", // description
+            b"BTKN9", // symbol
+            b"BASICTOKEN9", // name
+            b"Description of the BASICTOKEN9", // description
             option::some<Url>(url::new_unsafe_from_bytes(b"https://token_url")), // icon url
             ctx
         );
