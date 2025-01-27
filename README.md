@@ -42,6 +42,22 @@ chmod +x ./interaction/devnet.sh
         --gas-budget 50000000
 ```
 
+```
+    sui client call \
+        --function mint \
+        --module basictoken \
+        --package 0x3d16ddb6a824a120233ae68edf04ff426744df623d0efab54d0b630ed8941096 \
+        --args 0xb86a4934d998f47237e7c218c739474f4a73848f18f426f9829525f5fc3178ea 6000000000000000 \
+        --gas-budget 50000000
+
+
+    sui client call \
+        --function mint_and_transfer \
+        --module basictoken \
+        --package 0x3d16ddb6a824a120233ae68edf04ff426744df623d0efab54d0b630ed8941096 \
+        --args 0xb86a4934d998f47237e7c218c739474f4a73848f18f426f9829525f5fc3178ea 12000000000000000 0xa7df724cdcd0924d5f4d2302dfc9db87e2b36e857fe529a1868d0484a5749e61 \
+        --gas-budget 50000000
+```
     
 
 
